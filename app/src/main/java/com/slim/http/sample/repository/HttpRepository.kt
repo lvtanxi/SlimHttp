@@ -2,7 +2,6 @@ package com.slim.http.sample.repository
 
 import android.annotation.SuppressLint
 import com.google.gson.GsonBuilder
-import com.http.corx.repository.ProtocolInterceptor
 import com.slim.http.delegate.CoroutineAdapterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

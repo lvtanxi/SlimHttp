@@ -1,4 +1,4 @@
-package com.http.corx.repository
+package com.slim.http.sample.repository
 
 import okhttp3.Interceptor
 import okhttp3.MediaType

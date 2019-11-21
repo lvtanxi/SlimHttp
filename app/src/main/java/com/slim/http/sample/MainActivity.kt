@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.collection.ArrayMap
-import com.slim.http.delegate.http
+import com.slim.http.delegate.slim
 import com.slim.http.delegate.zip
 import com.slim.http.intes.PageWidgetInterface
 import com.slim.http.intes.WidgetInterface
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity(), WidgetInterface, PageWidgetInterface {
         }.onSucess {
             test.text = "$it"
         }
-        http(this) {
+        slim(this) {
             weather1
         }.onSucess {
 

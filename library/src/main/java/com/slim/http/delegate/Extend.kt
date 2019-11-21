@@ -33,7 +33,7 @@ fun <T> LifecycleOwner.load(loader: () -> Deferred<T>): Deferred<T> {
 }
 
 
-fun <T> LifecycleOwner.http(
+fun <T> LifecycleOwner.slim(
     widgetInterface: WidgetInterface,
     showLoading: Boolean = true,
     toast: Boolean = true,
@@ -56,8 +56,8 @@ fun <T> LifecycleOwner.http(
 }
 
 
-fun <T> LifecycleOwner.httpPage(widgetInterface: WidgetInterface, loader: () -> Deferred<T>): SlimSubscriber<T> {
-    return http(widgetInterface, false, true, loader)
+fun <T> LifecycleOwner.page(widgetInterface: WidgetInterface, loader: () -> Deferred<T>): SlimSubscriber<T> {
+    return slim(widgetInterface, false, true, loader)
         .onSuccessWithNull {
             if (widgetInterface is PageWidgetInterface)
                 widgetInterface.addItems(it)
